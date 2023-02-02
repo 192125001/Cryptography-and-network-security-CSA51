@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+   int i, x,n;
+   char str[100];
+
+   printf("\nPlease enter a string:\t");
+   gets(str);
+   printf("\nEnter the key value:");
+   scanf("%d",&n);
+   switch(x=1)
+   {
+   case 1:
+      for(i = 0; (i < 100 && str[i] != '\0'); i++)
+        str[i] = str[i] + n; 
+      printf("\nEncrypted string: %s\n", str);
+
+   case 2:
+      for(i = 0; (i < 100 && str[i] != '\0'); i++)
+        str[i] = str[i] - n; 
+
+      printf("\nDecrypted string: %s\n", str);
+      break;
+   default:
+      printf("\nError\n");
+   }
+   return 0;
+}
